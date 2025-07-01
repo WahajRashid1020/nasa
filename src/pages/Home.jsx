@@ -26,7 +26,7 @@ function SectionWrapper({ children }) {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       className="flex-1"
-      style={{ marginBottom: "6rem" }}
+      style={{ marginBottom: "2rem" }}
     >
       {children}
     </motion.div>
@@ -39,17 +39,16 @@ export default function Home() {
 
   return (
     <div
-      className={`min-h-screen p-6 transition-all duration-300 ${
+      className={`min-h-screen  transition-all duration-300 ${
         isDark ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <div className="sm:flex gap-8">
-        <SectionWrapper>
-          <Spline scene="https://prod.spline.design/0HHP5UhOoA4EPyNI/scene.splinecode" />
-        </SectionWrapper>
-
+      <div className="sm:flex gap-2">
         <SectionWrapper>
           <ApodViewer isDark={isDark} />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Spline scene="https://prod.spline.design/0HHP5UhOoA4EPyNI/scene.splinecode" />
         </SectionWrapper>
       </div>
 

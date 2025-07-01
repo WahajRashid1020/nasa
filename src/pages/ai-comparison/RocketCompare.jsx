@@ -113,7 +113,10 @@ export default function RocketCompareList() {
 
   return (
     <div className="space-y-6 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold text-center">🚀 Rocket Compare Tool</h1>
+      <h1 className="text-3xl font-bold text-center">
+        {" "}
+        Compare Rockets with OpenAI
+      </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {rockets.map((rocket) => (

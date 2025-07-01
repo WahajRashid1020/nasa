@@ -65,11 +65,14 @@ export default function SolarSystemMediaExplorer() {
   return (
     <div className="min-h-screen bg-gradient-to-b text-white p-6 max-w-3xl mx-auto">
       <h1 className="text-4xl font-extrabold mb-8 text-center tracking-wide">
-        🌌 Solar System Explorer
+        Solar System Explorer
       </h1>
 
       {loading ? (
-        <Loader />
+        <>
+          <Loader />
+          <p className="text-center text-green-500 font-bold">Loading</p>
+        </>
       ) : hasNoData ? (
         <p className="text-center text-red-500 font-bold">
           Failed to load media for all planets.
